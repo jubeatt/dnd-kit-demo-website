@@ -1,101 +1,62 @@
-import Image from "next/image";
+'use client'
+
+import Link from 'next/link'
+import { List } from './components/ui/list'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div>
+      <h1 className='text-2xl font-bold mb-4'>Dnd Kit Demo</h1>
+      <div className='space-y-4'>
+        <p>
+          嗨，歡迎來到 Dnd Kit Demo 網站，這個網站是我在學習
+          <Link
+            className='external-link'
+            href='https://dndkit.com/'
+            target='_blank'
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            dnd-kit
+          </Link>
+          時做的一些範例。
+        </p>
+        <p>
+          dnd kit 本身的功能其實還挺豐富的，在官方的
+          <Link
+            className='external-link'
+            href='https://master--5fc05e08a4a65d0021ae0bf2.chromatic.com/?path=/story/core-draggable-hooks-usedraggable--basic-setup'
+            target='_blank'
           >
-            Read our docs
-          </a>
+            storybook
+          </Link>
+          可以看到相當多的範例。但有一個小問題是官方文件寫的真的是有點簡陋，就算看完官方文件以後再去參考 storybook
+          的原始碼，還是蠻難理解實際上在寫什麼？尤其是比較複雜的範例。‘
+        </p>
+        <p>
+          另外官方也沒有提供比較明確的
+          pattern，同樣的功能你可能會看到蠻多不同的寫法。像我這裡的內容也有可能是你沒看過的寫法，不過我還是盡力簡化啦，如果還是太難理解的話先說聲
+          Sorry！
+        </p>
+        <p>個人覺得如果能夠像 Redux 那樣整個社群裡有一個明確的 pattern 的話會更好一些。</p>
+        <p>總而言之，以上是個人的小小抱怨，目前這個範例網頁主要的內容有這些：</p>
+        <div className='pl-4'>
+          <List
+            paragraphs={[
+              `Basic：怎麼設定可拖拉元件（draggable）和可拖放元件（droppable）`,
+              `Sortable：怎麼製作可排序的列表？（單欄）`,
+              `Sortable Multiple：怎麼製作可排序的列表？（多欄）`,
+              `Handle：怎麼自定義拖拉用的按鈕？`,
+            ]}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <p>
+          雖然內容沒有很多，但我覺得這些功能是我目前工作上最常見的幾種拖拉情境（<del>絕對不是因為太懶惰</del>
+          ），所以希望這次學玩以後，將來碰到相關的情境時能夠用更優雅的方式來解決。
+        </p>
+        <p>
+          將來有時間或靈感的話也會陸續在新增一些更多內容，如果各位讀者看了覺得還不錯，有幫助到你的話也歡迎到我的 GitHub
+          幫我點個 star 啦~~~
+        </p>
+      </div>
     </div>
-  );
+  )
 }

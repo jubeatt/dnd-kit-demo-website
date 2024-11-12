@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dnd Kit Demo Website
 
-## Getting Started
+## 簡介
 
-First, run the development server:
+嗨，歡迎來到 Dnd Kit Demo 網站，這個網站是我在學習 dnd-kit 時做的一些範例。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+會有這個網站是因為我自己覺得 dnd-kit 的官方文件有點太簡陋了，在我讀完以後要開始做一些功能時，還是會有一種摸不著頭緒的感覺，因此才決定整理了一份我覺得比較好理解的範例與說明。
+
+網站中的範例大多是以我自己比較常見的需求來設計，也有盡量排除掉跟拖拉不相關的花俏功能，目的是希望能把焦點在拖拉的實作上，也避免讓原始碼變得太雜亂。
+
+不過還是要特別提一下，這個範例網站終究還是比較偏向於我的個人筆記，所以在說明的部分會比較簡潔，建議有想要參考的人還是先稍微看過官方文件的基礎介紹以後再來看會比較好一點。
+
+## 使用技術
+
+這份專案是以 Next.js 製作，並包含底下項目：
+
+- @dnd-kit/core
+- @dnd-kit/sortable
+- TypeScript
+- TailwindCss
+
+## 開發相關
+
+這份專案使用的 Node 版本為 `v20.10.0`
+
+1\. 安裝依賴項目：
+
+```
+npm ci
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2\. 啟動 dev server：：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3\. 部署至 vercel
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+npm run deploy
+```

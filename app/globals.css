@@ -2,26 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Standard webkit scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::-webkit-scrollbar:horizontal {
+  height: 6px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+::-webkit-scrollbar-thumb {
+  @apply bg-rose-900 rounded-xl;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.scroll-inner::-webkit-scrollbar-thumb {
+  @apply bg-sky-300 rounded-xl;
+}
+
+.external-link {
+  @apply text-sky-400 hover:underline px-1;
 }
