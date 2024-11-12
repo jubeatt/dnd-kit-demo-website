@@ -12,6 +12,8 @@
 
 網站連結：[https://dnd-kit-demo-website.vercel.app/](https://dnd-kit-demo-website.vercel.app/)
 
+![screenshot.png](./screenshot.png)
+
 ## 使用技術
 
 這份專案是以 Next.js（App Router）製作，並包含底下項目：
