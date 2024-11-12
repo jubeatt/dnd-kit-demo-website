@@ -12,7 +12,7 @@
 
 ## 使用技術
 
-這份專案是以 Next.js 製作，並包含底下項目：
+這份專案是以 Next.js（App Router）製作，並包含底下項目：
 
 - @dnd-kit/core
 - @dnd-kit/sortable
@@ -35,8 +35,6 @@ npm ci
 npm run dev
 ```
 
-3\. 部署至 vercel
+3\. 部署
 
-```
-npm run deploy
-```
+此專案部署在 Vercel 上，因此只要用 `git push` 更新遠端上的原始碼以後就會自動跑部署流程。
