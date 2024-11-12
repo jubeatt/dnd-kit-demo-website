@@ -10,6 +10,8 @@
 
 不過還是要特別提一下，這個範例網站終究還是比較偏向於我的個人筆記，所以在說明的部分會比較簡潔，建議有想要參考的人還是先稍微看過官方文件的基礎介紹以後再來看會比較好一點。
 
+網站連結：[https://dnd-kit-demo-website.vercel.app/](https://dnd-kit-demo-website.vercel.app/)
+
 ## 使用技術
 
 這份專案是以 Next.js（App Router）製作，並包含底下項目：
@@ -17,7 +19,7 @@
 - @dnd-kit/core
 - @dnd-kit/sortable
 - TypeScript
-- TailwindCss
+- TailwindCSS
 
 ## 開發相關
 
