@@ -83,7 +83,7 @@ export function SideBar() {
         </div>
       </nav>
       <Link
-        href='/'
+        href='https://github.com/jubeatt/dnd-kit-demo-website'
         className='hover:bg-gray-700 rounded p-2'
       >
         <div className='flex items-center gap-2'>
